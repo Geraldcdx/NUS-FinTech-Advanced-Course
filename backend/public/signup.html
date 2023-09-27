@@ -91,4 +91,20 @@
           </div>
         </form>
 </body>
+<br>
+    <button onclick="makeGetRequest()">Make GET Request</button>
+    <div id="response"></div>
+    <script>
+        function makeGetRequest() {
+            fetch('http://127.0.0.1:3000/accounts/get-all')
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the response data
+                    document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
 </html>
