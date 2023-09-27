@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>My Node.js App</title>
 </head>
 <body>
     <h1>Hello, Node.js!</h1>
+    <section>
+        <h3>Sign up</h3>
+        <form id="form">
+            <div class="form-control">
+              <label for="username">Username</label>    
+              <input id="username" placeholder="Enter username" />
+            </div>
+            <div class="form-control">
+              <label for="password">End Date</label>    
+              <input id="password" placeholder="password" />
+            </div>
+            <button class="btn">Submit</button>
+          </form>
+    </section>
+
+    <section>
+        <h3>Login</h3>
+        <form id="form">
+            <div class="form-control">
+              <label for="username">Username</label>    
+              <input id="username" placeholder="Enter username" />
+            </div>
+            <div class="form-control">
+              <label for="password">End Date</label>    
+              <input id="password" placeholder="password" />
+            </div>
+            <button class="btn">Submit</button>
+          </form>
+    </section>
 </body>
+<br>
     <button onclick="makeGetRequest()">Make GET Request</button>
     <div id="response"></div>
-
     <script>
         function makeGetRequest() {
             fetch('http://127.0.0.1:3000/accounts/get-all')
