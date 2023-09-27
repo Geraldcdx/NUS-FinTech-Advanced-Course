@@ -1,6 +1,7 @@
 // File will contain all the APIs related to the User handling
 const express = require('express');
 const database = require('../mock_data');
+//const db = require('database')
 
 const router = express.Router();
 
@@ -29,6 +30,12 @@ router.post('/add', (request, response) => {
     });
     response.send("User added successfully");
   });
+
+  // define a GET API to get user by id
+// router.get('/db', (request, response) => {
+//     const db = db.getSQL()
+//     response.send('getSQL')
+// });
 
 // Practical Exercise: Create a POST request for this API and show that it is running
 

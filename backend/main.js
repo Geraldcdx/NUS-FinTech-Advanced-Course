@@ -1,11 +1,20 @@
 const express = require("express");
 const user = require("./apis/user");
+const accounts = require("./apis/accounts")
+const financial = require("./apis/financial")
 
 const service = express();
 
-service.use(express.json());
+service.use(express.json()); //use server
 
-service.use("/user", user.router);
+service.use("/user", user.router); //use route
+
+service.use("/accounts", accounts.router)
+
+service.use("/financial", financial.router)
+
+// Serve static files (like your HTML file) from a directory
+service.use(express.static('public'));
 
 service.listen(3000, (error) => {
   if (error) {
@@ -14,6 +23,8 @@ service.listen(3000, (error) => {
     console.log("Server started on port 3000");
   }
 });
+
+
 
 // File 1 - Mock Data Layer
 // File 2 - Logic for all the APIs
