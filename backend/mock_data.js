@@ -1,7 +1,4 @@
-//host: mysql-365889e4-blueconnector-305f.aivencloud.com
-//user: nusclass
-//password: AVNS_HqZwQM1V6udeuxK9a4Q
-//port 17449
+
 let users = [
     {
       first_name: "Dena",
