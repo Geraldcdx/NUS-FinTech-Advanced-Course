@@ -1,0 +1,15 @@
+.heading {
+    background-color: rgb(113, 221, 198);
+    text-align: center;
+}
+
+.navigation {
+    background-color:black;
+    margin-top:-5px
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
