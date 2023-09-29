@@ -36,7 +36,7 @@ router.get("/get-by-username-password", (request,response)=>{
       console.error(error);
       response.status(500).send("Internal Server Error");
     } else {
-      response.status(200).send(results);
+      response.status(200).send("Logged In");
     }
   });
 });

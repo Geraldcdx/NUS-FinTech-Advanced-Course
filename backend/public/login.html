@@ -75,7 +75,7 @@
           
           <div class="row justify-content-end">
             <div class="col-auto">
-              <button type="submit" class="btn btn-primary">Register</button>
+              <button onclick="login()" class="btn btn-primary">Register</button>
             </div>
           </div>
         </form>
@@ -84,6 +84,12 @@
     <!-- <button onclick="makeGetRequest()">Make GET Request</button>
     <div id="response"></div> -->
     <script>
+
+        function login(){
+          
+          url = 'http://127.0.0.1:3000/login/get-by-username-password?username=<USERNAME TO CHECK>&password=<PASSWORD TO CHECK>'
+            // use a get request and if username and password match it will return "user logged in"
+        }
         function makeGetRequest() {
             fetch('http://127.0.0.1:3000/accounts/get-all')
                 .then(response => response.json())
