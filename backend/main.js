@@ -2,6 +2,7 @@ const express = require("express");
 const user = require("./apis/user");
 const accounts = require("./apis/accounts")
 const financial = require("./apis/financial")
+const login = require("./apis/login")
 
 const service = express();
 
@@ -12,6 +13,8 @@ service.use("/user", user.router); //use route
 service.use("/accounts", accounts.router)
 
 service.use("/financial", financial.router)
+
+service.use("/login", login.router)
 
 // Serve static files (like your HTML file) from a directory
 service.use(express.static('public'));
