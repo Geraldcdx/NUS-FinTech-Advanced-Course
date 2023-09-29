@@ -81,13 +81,13 @@
         </form>
 </body>
 <br>
-    <!-- <button onclick="makeGetRequest()">Make GET Request</button>
-    <div id="response"></div> -->
+  <!-- <button onclick="makeGetRequest()">Make GET Request</button> -->
+    <div id="response"></div>
     <script>
 
         function login(){
           
-          url = 'http://127.0.0.1:3000/login/get-by-username-password?username=<USERNAME TO CHECK>&password=<PASSWORD TO CHECK>'
+          url = `http://127.0.0.1:3000/login/get-by-username-password?username=${personEmail}&password=${PersonPassword}`
             // use a get request and if username and password match it will return "user logged in"
         }
         function makeGetRequest() {
